@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Bojti András üvegszobrász</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<link rel="stylesheet" href="bojti_main.css">
+<script>
+//Főtémák -> könyvtár
+switch (window.document.location.search.substring(5,6)) {
+		case '1':
+			tema='Környezeti ill. köztéri szobrok';
+			src='img/temak/kozter'
+			break
+		case '2':
+			tema='Nonfiguratív plasztikák';
+			src='img/temak/nonfigurativ'
+			break
+		case '3':
+			tema='Torzók';
+			src='img/temak/torzok'
+			break
+		case '4':
+			tema='Belsőépítészeti plasztikák';
+			src='img/temak/belso'
+			break
+		case '5':
+			tema='Világító plasztikák';
+			src='img/temak/vilagito'
+			break
+		case '6':
+			tema='Kétdimenziós faliképek';
+			src='img/temak/2d'
+			break
+		case '7':
+			tema='Tervek';
+			src='img/temak/tervek'
+			break
+		case '8':
+			tema='Virtuális filozófia';
+			src='img/temak/virtualis'
+			break
+			}
+
+//Altémák -> könyvtár
+switch (window.document.location.search.substring(7,9)) {
+		case '1':
+			tema_belso='Lávamozgás - uszodai plasztika';
+			src_belso='lava'
+			break
+		case '2':
+			tema_belso='Medencetér - bevilágító nyílás';
+			src_belso='medence'
+			break
+		case '3':
+			tema_belso='Falnyílások - Szt. Kereszt Templom';
+			src_belso='falnyilas'
+			break
+		case '4':
+			tema_belso='Tabernákulum - Szt. Kereszt Templom';
+			src_belso='tabernakulum1'
+			break
+		case '5':
+			tema_belso='Tabernákulum - Szt. Péter-Pál Templom';
+			src_belso='tabernakulum2'
+			break
+		case '6':
+			tema_belso='Az élet vize - Kápolna fal';
+			src_belso='eletvize'
+			break
+		case '7':
+			tema_belso='Lépcsőtér';
+			src_belso='lepcsoter'
+			break
+		case '8':
+			tema_belso='Sztalaktit - családi ház';
+			src_belso='sztalaktit'
+			break
+		case '9':
+			tema_belso='Előtér - családi ház';
+			src_belso='eloter'
+			break
+		case '10':
+			tema_belso='Svéd Csepp';
+			src_belso='svedcsepp'
+			break
+		case '11':
+			tema_belso='Svéd hullám';
+			src_belso='svedhullam'
+			break
+		case '12':
+			tema_belso='Jégcsap - családi ház - építész: Vonnák János';
+			src_belso='jegcsap'
+			break
+		case '13':
+			tema_belso='Szikla - családi ház - építész: Vonnák János';
+			src_belso='szikla'
+			break
+		case '14':
+			tema_belso='Oltár kőlap tartó üveg és ambó - Építész tervező: Francsics László';
+			src_belso='oltaruveg'
+			break
+			}
+			
+var kepekszama=window.document.location.search.substring(1,2);
+var info=window.document.location.search.substring(3,4);
+
+var imgsrc=src+"/"+src_belso+"/b_"+info+".jpg";
+
+var infoplusz=parseInt(info)+1;
+var infominusz=parseInt(info)-1;
+var elozo="tema_belso_img.htm?"+kepekszama+"&"+infominusz+"&"+window.document.location.search.substring(5,6)+"&"+window.document.location.search.substring(7,9);
+var kovetkezo="tema_belso_img.htm?"+kepekszama+"&"+infoplusz+"&"+window.document.location.search.substring(5,6)+"&"+window.document.location.search.substring(7,9);
+
+</script>
+</head>
+<body> 
+<table height="100%" border="0" cellpadding="10" cellspacing="0" align="center"> 
+  <tr> 
+    <td class="normal_bold" align="center" valign="middle" colspan="2"><script>document.write(tema_belso)</script></td> 
+  </tr> 
+  <tr> 
+    <td align="center" valign="middle" colspan="2">
+<script language="javascript">
+	document.write("<img src="+imgsrc+"></td></tr>");
+	document.write("<tr><td class=normal align=left valign=middle>")
+	if (infominusz > 0) {document.write("<a href="+elozo+"><img src=img/nyil_bal.jpg border=0> Előző kép</a>");}
+	document.write("</td><td class=normal align=right valign=middle>")
+	if (infoplusz<=kepekszama) {document.write("<a href="+kovetkezo+">Következő kép <img src=img/nyil_jobb.jpg border=0></a></td></tr>");}
+</script> 
+</table> 
+</body>
+</html>

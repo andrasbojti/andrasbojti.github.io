@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Bojti András üvegszobrász</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<link rel="stylesheet" href="bojti_main.css">
+<script>
+//Főtémák -> könyvtár
+switch (window.document.location.search.substring(5,6)) {
+		case '1':
+			tema='Environment and public space sculptures';
+			src='img/temak/kozter'
+			break
+		case '2':
+			tema='Abstract sculptures';
+			src='img/temak/nonfigurativ'
+			break
+		case '3':
+			tema='Torsos';
+			src='img/temak/torzok'
+			break
+		case '4':
+			tema='Interieur sculptures';
+			src='img/temak/belso'
+			break
+		case '5':
+			tema='Lighting sculptures';
+			src='img/temak/vilagito'
+			break
+		case '6':
+			tema='Murals';
+			src='img/temak/2d'
+			break
+		case '8':
+			tema='Virtual philosophy';
+			src='img/temak/virtualis'
+			break
+			}
+
+//Altémák -> könyvtár
+switch (window.document.location.search.substring(7,9)) {
+		case '1':
+			tema_belso='Convex Dance';
+			src_belso='konvex'
+			break
+		case '2':
+			tema_belso='Concave Dance';
+			src_belso='konkav'
+			break
+		case '3':
+			tema_belso='An Indian Torso';
+			src_belso='indian'
+			break
+		case '4':
+			tema_belso='Lady Shaman';
+			src_belso='saman'
+			break
+		case '5':
+			tema_belso='3 Angles';
+			src_belso='3szog'
+			break
+		case '6':
+			tema_belso='Aphrodite\'s Birth';
+			src_belso='aphrodite'
+			break
+		case '7':
+			tema_belso='A Girl with yellow Window';
+			src_belso='sarga'
+			break
+		case '8':
+			tema_belso='Capriccio';
+			src_belso='capriccio'
+			break
+		case '9':
+			tema_belso='Spring in the East';
+			src_belso='tavasz'
+			break
+		case '10':
+			tema_belso='Parasol';
+			src_belso='napernyos'
+			break
+		case '11':
+			tema_belso='Miss Bird';
+			src_belso='madarlany'
+			break
+		case '12':
+			tema_belso='Winter';
+			src_belso='tel'
+			break
+		case '13':
+			tema_belso='Summer';
+			src_belso='nyar'
+			break
+			}
+			
+var kepekszama=window.document.location.search.substring(1,2);
+var info=window.document.location.search.substring(3,4);
+
+var imgsrc=src+"/"+src_belso+"/b_"+info+".jpg";
+
+var infoplusz=parseInt(info)+1;
+var infominusz=parseInt(info)-1;
+var elozo="tema_torzo_img.htm?"+kepekszama+"&"+infominusz+"&"+window.document.location.search.substring(5,6)+"&"+window.document.location.search.substring(7,9);
+var kovetkezo="tema_torzo_img.htm?"+kepekszama+"&"+infoplusz+"&"+window.document.location.search.substring(5,6)+"&"+window.document.location.search.substring(7,9);
+
+</script>
+</head>
+<body> 
+<table height="100%" border="0" cellpadding="10" cellspacing="0" align="center"> 
+  <tr> 
+    <td class="normal_bold" align="center" valign="middle" colspan="2"><script>document.write(tema_belso)</script></td> 
+  </tr> 
+  <tr> 
+    <td align="center" valign="middle" colspan="2">
+<script language="javascript">
+	document.write("<img src="+imgsrc+"></td></tr>");
+	document.write("<tr><td class=normal align=left valign=middle>")
+	if (infominusz > 0) {document.write("<a href="+elozo+"><img src=img/nyil_bal.jpg border=0> Previous image</a>");}
+	document.write("</td><td class=normal align=right valign=middle>")
+	if (infoplusz<=kepekszama) {document.write("<a href="+kovetkezo+">Next image <img src=img/nyil_jobb.jpg border=0></a></td></tr>");}
+</script> 
+</table> 
+</body>
+</html>

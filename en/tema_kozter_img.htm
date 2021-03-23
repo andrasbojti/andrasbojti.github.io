@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Bojti András üvegszobrász</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<link rel="stylesheet" href="bojti_main.css">
+<script>
+//Főtémák -> könyvtár
+switch (window.document.location.search.substring(5,6)) {
+		case '1':
+			tema='Környezeti ill. köztéri szobrok';
+			src='img/temak/kozter'
+			break
+		case '2':
+			tema='Nonfiguratív plasztikák';
+			src='img/temak/nonfigurativ'
+			break
+		case '3':
+			tema='Torzók';
+			src='img/temak/torzok'
+			break
+		case '4':
+			tema='Belsőépítészeti plasztikák';
+			src='img/temak/belso'
+			break
+		case '5':
+			tema='Világító plasztikák';
+			src='img/temak/vilagito'
+			break
+		case '6':
+			tema='Kétdimenziós faliképek';
+			src='img/temak/2d'
+			break
+		case '7':
+			tema='Tervek';
+			src='img/temak/tervek'
+			break
+		case '8':
+			tema='Virtuális filozófia';
+			src='img/temak/virtualis'
+			break
+			}
+//Altémák -> könyvtár
+switch (window.document.location.search.substring(7,9)) {
+		case '1':
+			tema_belso='Jégvilág - Graphisoft Park /Budapest/';
+			src_belso='jegvilag'
+			break
+		case '2':
+			tema_belso='Küldetes kapui';
+			src_belso='gates'
+			break
+		case '3':
+			tema_belso='GANZ sípok - Millenáris Park /Budapest/';
+			src_belso='ganz'
+			break
+		case '4':
+			tema_belso='Szabadság /Munster/';
+			src_belso='szabadsag'
+			break
+		case '5':
+			tema_belso='Erő II.';
+			src_belso='ero'
+			break
+		case '6':
+			tema_belso='Belső lépcső';
+			src_belso='belso_lepcso'
+			break
+		case '7':
+			tema_belso='Áttörés';
+			src_belso='attores'
+			break
+		case '8':
+			tema_belso='Fényépítmény';
+			src_belso='fenyepitmeny'
+			break
+		case '9':
+			tema_belso='MOM-Park - Bejárható köztéri plasztika';
+			src_belso='mom'
+			break
+		case '10':
+			tema_belso='Freedom Park emlékmű és múzem, (Pretoria, Dél-Afrika) - terv';
+			src_belso='freedompark'
+			break
+		case '11':
+			tema_belso='Freedom a pesti Gödör vizében';
+			src_belso='freedomgodor'
+			break
+		case '12':
+			tema_belso='Dieu - Tambacounda Szenegál';
+			src_belso='dieu'
+			break
+		case '13':
+			tema_belso='Áttörés II.';
+			src_belso='attores2'
+			break
+		case '14':
+			tema_belso='Vitorla (MKB irodaház) - 14 méter magas üveg-fém térplasztika (építész: Bálint Imre)';
+			src_belso='vitorla'
+			break			
+		case '15':
+			tema_belso='Cunami Emlékmű pályázat';
+			src_belso='tsunami'
+			break
+		case '16':
+			tema_belso='Spacepower';
+			src_belso='terero'
+			break		
+		case '17':
+			tema_belso='Heaven';
+			src_belso='mennyo'
+			break
+case '18':
+			tema_belso='Wandering of Dots';
+			src_belso='potty'
+			break
+		case '19':
+			tema_belso='Reflection';
+			src_belso='reflex'
+			break
+		case '20':
+			tema_belso='Glassblades';
+			src_belso='uvegpenge'
+			break							
+			}			
+
+var kepekszama=window.document.location.search.substring(1,2);
+var info=window.document.location.search.substring(3,4);
+
+var imgsrc=src+"/"+src_belso+"/b_"+info+".jpg";
+
+var infoplusz=parseInt(info)+1;
+var infominusz=parseInt(info)-1;
+var elozo="tema_kozter_img.htm?"+kepekszama+"&"+infominusz+"&"+window.document.location.search.substring(5,6)+"&"+window.document.location.search.substring(7,9);
+var kovetkezo="tema_kozter_img.htm?"+kepekszama+"&"+infoplusz+"&"+window.document.location.search.substring(5,6)+"&"+window.document.location.search.substring(7,9);
+
+</script>
+</head>
+<body>
+<table height="100%" border="0" cellpadding="10" cellspacing="0" align="center">
+  <tr>
+    <td class="normal_bold" align="center" valign="middle" colspan="2"><script>document.write(tema_belso)</script></td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle" colspan="2"><script language="javascript">
+	document.write("<img src="+imgsrc+"></td></tr>");
+	document.write("<tr><td class=normal align=left valign=middle>")
+	if (infominusz > 0) {document.write("<a href="+elozo+"><img src=img/nyil_bal.jpg border=0> Previous image</a>");}
+	document.write("</td><td class=normal align=right valign=middle>")
+	if (infoplusz<=kepekszama) {document.write("<a href="+kovetkezo+">Next image <img src=img/nyil_jobb.jpg border=0></a></td></tr>");}
+</script>
+</table>
+</body>
+</html>

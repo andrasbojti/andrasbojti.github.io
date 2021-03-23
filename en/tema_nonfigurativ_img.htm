@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Bojti András üvegszobrász</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<link rel="stylesheet" href="bojti_main.css">
+<script>
+//Főtémák -> könyvtár
+switch (window.document.location.search.substring(5,6)) {
+		case '1':
+			tema='Environment and public space sculptures';
+			src='img/temak/kozter'
+			break
+		case '2':
+			tema='Abstract sculptures';
+			src='img/temak/nonfigurativ'
+			break
+		case '3':
+			tema='Torsos';
+			src='img/temak/torzok'
+			break
+		case '4':
+			tema='Interieur sculptures';
+			src='img/temak/belso'
+			break
+		case '5':
+			tema='Lighting sculptures';
+			src='img/temak/vilagito'
+			break
+		case '6':
+			tema='Murals';
+			src='img/temak/2d'
+			break
+		case '8':
+			tema='Virtual philosophy';
+			src='img/temak/virtualis'
+			break
+			}
+
+//Altémák -> könyvtár
+switch (window.document.location.search.substring(7,9)) {
+		case '1':
+			tema_belso='Divorce';
+			src_belso='elvalas'
+			break
+		case '2':
+			tema_belso='Architecture I-IV.';
+			src_belso='architektura'
+			break
+		case '3':
+			tema_belso='Inner Stairs I.';
+			src_belso='belsolepcso'
+			break
+		case '4':
+			tema_belso='The Alps I.';
+			src_belso='alpok1'
+			break
+		case '5':
+			tema_belso='The Alps II.';
+			src_belso='alpok2'
+			break
+		case '6':
+			tema_belso='Castle I.';
+			src_belso='kastely1'
+			break
+		case '7':
+			tema_belso='Castle II.';
+			src_belso='kastely2'
+			break
+		case '8':
+			tema_belso='A Drop';
+			src_belso='csepp'
+			break
+		case '9':
+			tema_belso='Drops';
+			src_belso='cseppek'
+			break
+		case '10':
+			tema_belso='Power I.';
+			src_belso='ero'
+			break
+		case '11':
+			tema_belso='Cyclops';
+			src_belso='kuklopsz'
+			break
+		case '12':
+			tema_belso='Relationship';
+			src_belso='kapcsolat'
+			break
+		case '13':
+			tema_belso='We are in the space';
+			src_belso='terben'
+			break
+		case '14':
+			tema_belso='Erosion';
+			src_belso='erozio'
+			break
+			}
+			
+var kepekszama=window.document.location.search.substring(1,2);
+var info=window.document.location.search.substring(3,4);
+
+var imgsrc=src+"/"+src_belso+"/b_"+info+".jpg";
+
+var infoplusz=parseInt(info)+1;
+var infominusz=parseInt(info)-1;
+var elozo="tema_nonfigurativ_img.htm?"+kepekszama+"&"+infominusz+"&"+window.document.location.search.substring(5,6)+"&"+window.document.location.search.substring(7,9);
+var kovetkezo="tema_nonfigurativ_img.htm?"+kepekszama+"&"+infoplusz+"&"+window.document.location.search.substring(5,6)+"&"+window.document.location.search.substring(7,9);
+
+</script>
+</head>
+<body> 
+<table height="100%" border="0" cellpadding="10" cellspacing="0" align="center"> 
+  <tr> 
+    <td class="normal_bold" align="center" valign="middle" colspan="2"><script>document.write(tema_belso)</script></td> 
+  </tr> 
+  <tr> 
+    <td align="center" valign="middle" colspan="2">
+<script language="javascript">
+	document.write("<img src="+imgsrc+"></td></tr>");
+	document.write("<tr><td class=normal align=left valign=middle>")
+	if (infominusz > 0) {document.write("<a href="+elozo+"><img src=img/nyil_bal.jpg border=0> Previous image</a>");}
+	document.write("</td><td class=normal align=right valign=middle>")
+	if (infoplusz<=kepekszama) {document.write("<a href="+kovetkezo+">Next image <img src=img/nyil_jobb.jpg border=0></a></td></tr>");}
+</script> 
+</table> 
+</body>
+</html>

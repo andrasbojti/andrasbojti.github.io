@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Bojti András üvegszobrász</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<link rel="stylesheet" href="bojti_main.css">
+<script>
+//Főtémák -> könyvtár
+switch (window.document.location.search.substring(5,6)) {
+		case '1':
+			tema='Statuen in öffentlichen Plätze';
+			src='img/temak/kozter'
+			break
+		case '2':
+			tema='Abstrakt Plastiken';
+			src='img/temak/nonfigurativ'
+			break
+		case '3':
+			tema='Körper';
+			src='img/temak/torzok'
+			break
+		case '4':
+			tema='Enterieur Plastiken';
+			src='img/temak/belso'
+			break
+		case '5':
+			tema='Leuchtende Plastiken';
+			src='img/temak/vilagito'
+			break
+		case '6':
+			tema='Wandbilder';
+			src='img/temak/2d'
+			break
+		case '8':
+			tema='Virtuelle Philosophie';
+			src='img/temak/virtualis'
+			break
+			}
+
+//Altémák -> könyvtár
+switch (window.document.location.search.substring(7,9)) {
+		case '1':
+			tema_belso='Plastik in der Schwimmhalle';
+			src_belso='lava'
+			break
+		case '2':
+			tema_belso='Schwimmbad -Leuchtung';
+			src_belso='medence'
+			break
+		case '3':
+			tema_belso='Wall apertures - Heiligen-Kreuz-Kirche';
+			src_belso='falnyilas'
+			break
+		case '4':
+			tema_belso='Tabernakel - Heiligen-Kreuz-Kirche';
+			src_belso='tabernakulum1'
+			break
+		case '5':
+			tema_belso='Tabernakel - Peter-Paul Kirche';
+			src_belso='tabernakulum2'
+			break
+		case '6':
+			tema_belso='Lebenswasser - Kirche';
+			src_belso='eletvize'
+			break
+		case '7':
+			tema_belso='Luftraum';
+			src_belso='lepcsoter'
+			break
+		case '8':
+			tema_belso='Stalaktit - Einfamilienhaus';
+			src_belso='sztalaktit'
+			break
+		case '9':
+			tema_belso='Eintritt - Einfamilienhaus';
+			src_belso='eloter'
+			break
+		case '10':
+			tema_belso='Swedisch Tropfen';
+			src_belso='svedcsepp'
+			break
+		case '11':
+			tema_belso='Swedisch Welle';
+			src_belso='svedhullam'
+			break
+		case '12':
+			tema_belso='Eiszapfen - Einfamilienhaus - Architekt:  János Vonnák';
+			src_belso='jegcsap'
+			break
+		case '13':
+			tema_belso='Fels - Einfamilienhaus - ArchiteKt:  János Vonnák';
+			src_belso='szikla'
+			break
+			}
+			
+var kepekszama=window.document.location.search.substring(1,2);
+var info=window.document.location.search.substring(3,4);
+
+var imgsrc=src+"/"+src_belso+"/b_"+info+".jpg";
+
+var infoplusz=parseInt(info)+1;
+var infominusz=parseInt(info)-1;
+var elozo="tema_belso_img.htm?"+kepekszama+"&"+infominusz+"&"+window.document.location.search.substring(5,6)+"&"+window.document.location.search.substring(7,9);
+var kovetkezo="tema_belso_img.htm?"+kepekszama+"&"+infoplusz+"&"+window.document.location.search.substring(5,6)+"&"+window.document.location.search.substring(7,9);
+
+</script>
+</head>
+<body> 
+<table height="100%" border="0" cellpadding="10" cellspacing="0" align="center"> 
+  <tr> 
+    <td class="normal_bold" align="center" valign="middle" colspan="2"><script>document.write(tema_belso)</script></td> 
+  </tr> 
+  <tr> 
+    <td align="center" valign="middle" colspan="2">
+<script language="javascript">
+	document.write("<img src="+imgsrc+"></td></tr>");
+	document.write("<tr><td class=normal align=left valign=middle>")
+	if (infominusz > 0) {document.write("<a href="+elozo+"><img src=img/nyil_bal.jpg border=0> Voriges Bild</a>");}
+	document.write("</td><td class=normal align=right valign=middle>")
+	if (infoplusz<=kepekszama) {document.write("<a href="+kovetkezo+">Nächstes Bild <img src=img/nyil_jobb.jpg border=0></a></td></tr>");}
+</script> 
+</table> 
+</body>
+</html>
